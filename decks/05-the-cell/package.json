@@ -1,0 +1,22 @@
+{
+  "name": "mda-deck-05-the-cell",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "slidev --open",
+    "build": "slidev build",
+    "export": "slidev export --output export/the-cell.pdf",
+    "export-png": "slidev export --format png --output export/png"
+  },
+  "dependencies": {
+    "@slidev/cli": "^51.0.0",
+    "@slidev/theme-default": "^0.25.0",
+    "vue": "^3.5.13"
+  },
+  "devDependencies": {
+    "@iconify-json/carbon": "^1.2.0",
+    "@iconify-json/ph": "^1.2.0",
+    "@iconify-json/mdi": "^1.2.0",
+    "playwright-chromium": "^1.49.0"
+  }
+}

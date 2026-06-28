@@ -41,6 +41,7 @@ jobs:
           build_deck 03-macromolecules-lipids        lipids
           build_deck 04-macromolecules-proteins       proteins
           build_deck 01-macromolecules-nucleic-acids  nucleic-acids
+          build_deck 05-the-cell                       the-cell
 
       - uses: actions/upload-pages-artifact@v3
         with:
