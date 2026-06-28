@@ -149,3 +149,7 @@
 .deck-footer .brand { font-family:'Lexend'; font-weight:600; color: var(--mda-blue); }
 
 ul.tight li { margin: .18rem 0; }
+
+/* Hide Slidev's built-in quick-jump dialog — its tall slide list pokes onto
+   the screen from its hidden position. We provide our own collapsible menu. */
+#slidev-goto-dialog { display: none !important; }
