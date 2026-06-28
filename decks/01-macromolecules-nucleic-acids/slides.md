@@ -322,6 +322,7 @@ RNA is usually a <strong>single strand</strong> of ribonucleotides. Base pairs:
 ---
 layout: default
 class: cover-bg
+title: Final
 ---
 
 <div class="grid grid-cols-[1.1fr_0.9fr] items-center h-full gap-6">
