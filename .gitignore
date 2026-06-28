@@ -1,0 +1,13 @@
+# dependencies (regenerated with `npm install`)
+node_modules/
+
+# build / generated output
+dist/
+.vite/
+.slidev/
+**/export/
+
+# os / editor
+.DS_Store
+Thumbs.db
+*.log
