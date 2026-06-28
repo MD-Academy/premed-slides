@@ -8,22 +8,26 @@ each new topic is fast to produce and consistent with the rest.
 
 ```
 mda-premed-slides/
+├── site/index.html         ← course landing page (lists every lesson)
+├── .github/workflows/      ← builds all decks + index → GitHub Pages
 └── decks/
-    └── 01-macromolecules-nucleic-acids/   ← the pilot deck (template to clone)
-        ├── slides.md          ← all content (13 slides)
+    ├── 01-macromolecules-nucleic-acids/   → /nucleic-acids/   (13 slides)
+    ├── 02-macromolecules-carbohydrates/   → /carbohydrates/   (15 slides)
+    ├── 03-macromolecules-lipids/          → /lipids/          (15 slides)
+    └── 04-macromolecules-proteins/        → /proteins/        (14 slides)
+        ├── slides.md          ← all content
         ├── styles/theme.css   ← shared visual theme (colors, cards, tables, badges)
-        ├── components/        ← custom copyright-free graphics (SVG, Vue)
-        │   ├── DnaHelix.vue        animated colored double helix
-        │   ├── Nucleotide.vue      phosphate–sugar–base schematic
-        │   ├── RingStructure.vue   purine / pyrimidine rings
+        ├── components/        ← custom copyright-free graphics (original SVG, Vue)
         │   └── Ic.vue              inline MDI icons (Apache-2.0)
-        ├── global-bottom.vue  ← footer/branding on every slide
-        └── export/            ← generated PDF + PNGs
+        ├── global-top.vue     ← collapsible slide menu (per-deck TOC)
+        └── global-bottom.vue  ← footer/branding on every slide
 ```
 
-> The pilot deck is self-contained. When deck 2 is added, the `styles/` +
-> `components/` will be extracted into a shared local Slidev **addon** so all
-> decks share one source of truth (no copy-paste drift).
+Live site: **https://md-academy.github.io/premed-slides/** (index → each lesson).
+
+> Each deck is self-contained (proven, build-safe). `styles/theme.css` + `Ic.vue`
+> are identical copies across decks; the diagram components and TOC are per-topic.
+> A future cleanup may extract the shared parts into a local Slidev **addon**.
 
 ## Commands (run inside a deck folder)
 

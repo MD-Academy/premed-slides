@@ -24,11 +24,23 @@ jobs:
         with:
           node-version: 20
 
-      - name: Install & build deck 01
-        working-directory: decks/01-macromolecules-nucleic-acids
+      - name: Build all decks + index
         run: |
-          npm ci
-          npx slidev build --base /premed-slides/ --out ../../dist
+          set -e
+          build_deck () {
+            dir="$1"; sub="$2"
+            echo "::group::Building $sub"
+            ( cd "decks/$dir" \
+              && npm ci \
+              && npx slidev build --base "/premed-slides/$sub/" --out "$GITHUB_WORKSPACE/dist/$sub" )
+            echo "::endgroup::"
+          }
+          mkdir -p dist
+          cp site/index.html dist/index.html
+          build_deck 02-macromolecules-carbohydrates carbohydrates
+          build_deck 03-macromolecules-lipids        lipids
+          build_deck 04-macromolecules-proteins       proteins
+          build_deck 01-macromolecules-nucleic-acids  nucleic-acids
 
       - uses: actions/upload-pages-artifact@v3
         with:

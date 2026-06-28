@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MDA Premedical Biology — Lessons</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Lexend:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --navy:#0B2540; --navy2:#123A5E; --blue:#1E6FB8; --cyan:#2BA8E0; --sky:#7DD3F0;
+      --teal:#14B8A6; --ink:#1A2B3C; --muted:#5B6B7B; --line:#E4EAF0; --bg:#FBFAF6; --card:#F2F7FB;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family:'Inter',system-ui,sans-serif; color:var(--ink); background:var(--bg); }
+    a { text-decoration: none; color: inherit; }
+
+    .hero {
+      background: linear-gradient(150deg, var(--navy) 0%, var(--navy2) 60%, #16507f 100%);
+      color:#fff; padding: 64px 24px 72px; text-align:center; position:relative; overflow:hidden;
+    }
+    .hero .eyebrow {
+      display:inline-block; font-family:'Lexend'; font-size:.72rem; font-weight:600;
+      letter-spacing:.18em; text-transform:uppercase; color:var(--sky);
+      border:1px solid rgba(125,211,240,.4); border-radius:999px; padding:.3rem .9rem; margin-bottom:1.1rem;
+    }
+    .hero h1 { font-family:'Lexend'; font-size: clamp(2rem, 5vw, 3.1rem); line-height:1.05; font-weight:700; }
+    .hero p { max-width: 640px; margin: 1rem auto 0; color:#C4D8EA; font-size:1.05rem; line-height:1.55; }
+
+    .wrap { max-width: 1080px; margin: -36px auto 0; padding: 0 24px 72px; position:relative; }
+
+    .unit { background:#fff; border:1px solid var(--line); border-radius:20px;
+      box-shadow: 0 18px 50px -28px rgba(11,37,64,.45); padding: 28px 28px 32px; margin-bottom: 28px; }
+    .unit-head { display:flex; align-items:center; gap:12px; margin-bottom: 4px; }
+    .unit-badge { font-family:'Lexend'; font-weight:700; font-size:.7rem; letter-spacing:.12em;
+      text-transform:uppercase; color:#fff; background:linear-gradient(90deg,var(--cyan),var(--blue));
+      border-radius:999px; padding:.32rem .8rem; }
+    .unit h2 { font-family:'Lexend'; font-size:1.5rem; color:var(--navy); font-weight:700; }
+    .unit .sub { color:var(--muted); font-size:.92rem; margin:.3rem 0 1.3rem; }
+
+    .grid { display:grid; grid-template-columns: repeat(auto-fill, minmax(228px,1fr)); gap:16px; }
+    .lesson {
+      display:block; background:var(--card); border:1px solid var(--line); border-radius:16px;
+      padding:18px; transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+    }
+    .lesson:hover { transform: translateY(-3px); box-shadow:0 16px 34px -20px rgba(11,37,64,.5); border-color:var(--sky); }
+    .lesson .num { font-family:'Lexend'; font-size:.72rem; font-weight:600; letter-spacing:.1em; color:var(--blue); }
+    .lesson h3 { font-family:'Lexend'; font-size:1.12rem; color:var(--navy); margin:.25rem 0 .35rem; font-weight:700; }
+    .lesson p { color:var(--muted); font-size:.82rem; line-height:1.5; }
+    .lesson .go { display:inline-flex; align-items:center; gap:6px; margin-top:.7rem;
+      font-size:.8rem; font-weight:600; color:var(--blue); }
+
+    .lesson.soon { opacity:.62; pointer-events:none; }
+    .lesson.soon .num { color:var(--muted); }
+    .tag-soon { font-size:.65rem; font-weight:600; letter-spacing:.08em; text-transform:uppercase;
+      color:var(--muted); background:#EAEFF4; border-radius:999px; padding:.18rem .5rem; }
+
+    footer { text-align:center; color:var(--muted); font-size:.8rem; padding: 8px 24px 48px; }
+    footer strong { color:var(--blue); font-family:'Lexend'; }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="eyebrow">Medical Doctor Academy</div>
+    <h1>Premedical Biology</h1>
+    <p>Modern, interactive lessons for the MDA premedical program. Select a lesson to begin —
+       use the arrow menu inside each lesson to jump between slides.</p>
+  </header>
+
+  <main class="wrap">
+    <section class="unit">
+      <div class="unit-head">
+        <span class="unit-badge">Unit</span>
+        <h2>Macromolecules</h2>
+      </div>
+      <p class="sub">The four classes of biological macromolecules — structure, function, and significance.</p>
+      <div class="grid">
+        <a class="lesson" href="./carbohydrates/">
+          <div class="num">LESSON 1</div>
+          <h3>Carbohydrates</h3>
+          <p>Sugars &amp; saccharides, glucose isomers, di- &amp; polysaccharides, blood-glucose regulation.</p>
+          <span class="go">Open lesson →</span>
+        </a>
+        <a class="lesson" href="./lipids/">
+          <div class="num">LESSON 2</div>
+          <h3>Lipids</h3>
+          <p>Fatty acids &amp; the omega system, triglycerides, phospholipids, cholesterol &amp; LDL/HDL.</p>
+          <span class="go">Open lesson →</span>
+        </a>
+        <a class="lesson" href="./proteins/">
+          <div class="num">LESSON 3</div>
+          <h3>Proteins</h3>
+          <p>Amino acids, peptide bonds, the four levels of structure, protein function &amp; R-groups.</p>
+          <span class="go">Open lesson →</span>
+        </a>
+        <a class="lesson" href="./nucleic-acids/">
+          <div class="num">LESSON 4</div>
+          <h3>Nucleic Acids</h3>
+          <p>Nucleotides, purines &amp; pyrimidines, DNA &amp; RNA structure and key differences.</p>
+          <span class="go">Open lesson →</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <strong>MDA</strong> · Premedical Biology &nbsp;·&nbsp; Medical Doctor Academy
+  </footer>
+</body>
+</html>
